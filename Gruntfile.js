@@ -3,6 +3,10 @@ module.exports = function(grunt) {
     jshint: {
       files: ["Gruntfile.js", "app.js", "public/*.js"]
     },
+    watch: {
+    files: ['app.js','public/'],
+    tasks: 'default'
+    },
     copy: {
       main: {
         files: [
@@ -16,6 +20,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-clean");
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask("default", ["jshint","copy"]);
+  grunt.registerTask("default", ["jshint","copy","watch"]);
 };

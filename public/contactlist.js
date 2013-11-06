@@ -1,5 +1,3 @@
-
-
 function makeContactRowClickable() {
   $(".table > tbody > tr").click(function() {
     var newUrl = window.location.href;
